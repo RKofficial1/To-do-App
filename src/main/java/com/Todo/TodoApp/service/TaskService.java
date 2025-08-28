@@ -1,0 +1,27 @@
+package com.Todo.TodoApp.service;
+import com.Todo.TodoApp.model.Task;
+import com.Todo.TodoApp.repository.TaskRepository;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class TaskService {
+    private final TaskRepository taskRepository;
+
+    public TaskService(TaskRepository taskRepository) {
+        this.taskRepository = taskRepository;
+    }
+
+
+    public List<Task> findAllTask() {
+        return taskRepository.findAll();
+    }
+
+    public void createTask(String title) {
+        Task task = new Task();
+        task.setTitle(title);
+        task.setCompleted(false);
+        taskRepository.save(task);
+    }
+}
