@@ -2,6 +2,7 @@ package com.Todo.TodoApp.controller;
 
 import com.Todo.TodoApp.model.Task;
 import com.Todo.TodoApp.service.TaskService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -12,11 +13,12 @@ import java.util.List;
 @Controller
 @RequestMapping("/tasks")
 public class TaskController {
-    private final TaskService taskService;
+    @Autowired
+    private TaskService taskService;
 
-    public TaskController(TaskService taskService) {
-        this.taskService = taskService;
-    }
+//    public TaskController(TaskService taskService) {
+//        this.taskService = taskService;
+//    }
 
     @GetMapping
     public String getTasks(Model model){

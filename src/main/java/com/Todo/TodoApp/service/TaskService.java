@@ -1,6 +1,7 @@
 package com.Todo.TodoApp.service;
 import com.Todo.TodoApp.model.Task;
 import com.Todo.TodoApp.repository.TaskRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -8,11 +9,8 @@ import java.util.Optional;
 
 @Service
 public class TaskService {
-    private final TaskRepository taskRepository;
-
-    public TaskService(TaskRepository taskRepository) {
-        this.taskRepository = taskRepository;
-    }
+    @Autowired
+    private TaskRepository taskRepository;
 
 
     public List<Task> findAllTask() {
