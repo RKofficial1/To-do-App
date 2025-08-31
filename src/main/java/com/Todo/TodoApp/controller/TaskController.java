@@ -3,10 +3,12 @@ package com.Todo.TodoApp.controller;
 import com.Todo.TodoApp.model.Task;
 import com.Todo.TodoApp.service.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,10 +29,12 @@ public class TaskController {
         return "tasks";
     }
     @PostMapping
-    public String createTask(@RequestParam String title){
-        taskService.createTask(title);
-        return"redirect:/tasks";
+    public String createTask(@RequestParam String title,
+                             @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime deadline) {
+        taskService.createTask(title, deadline);
+        return "redirect:/tasks";
     }
+
     @GetMapping("/{id}/delete")
     public String getTasks(@PathVariable Long id){
         taskService.deleteTask(id);

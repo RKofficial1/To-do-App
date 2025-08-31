@@ -4,6 +4,7 @@ import com.Todo.TodoApp.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,12 +18,13 @@ public class TaskService {
         return taskRepository.findAll();
     }
 
-    public void createTask(String title) {
+    public void createTask(String title, LocalDateTime deadline) {
         Task task = new Task();
         task.setTitle(title);
-        task.setCompleted(false);
+        task.setDeadline(deadline);
         taskRepository.save(task);
     }
+
 
     public void deleteTask(Long id) {
         taskRepository.deleteById(id);
