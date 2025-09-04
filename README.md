@@ -106,11 +106,11 @@ A full-stack, feature-rich **To-Do List Application** built with **Spring Boot M
 ## 🔧 API Endpoints
 
 | HTTP Method | Endpoint      | Description                |
-|-------------|---------------|----------------------------|
-| `GET`       | `/`           | Displays the list of tasks |
-| `POST`      | `/add`        | Creates a new task         |
+|------------|---------------|----------------------------|
+| `GET`      | `/`           | Displays the list of tasks |
+| `POST`     | `/add`        | Creates a new task         |
 | `GET`      | `/update`     | Toggles a task's status    |
-| `GETT`      | `/delete`     | Deletes a task by ID       |
+| `GET`      | `/delete`     | Deletes a task by ID       |
 
 ---
 
