@@ -114,31 +114,11 @@ A full-stack, feature-rich **To-Do List Application** built with **Spring Boot M
 
 ---
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](../../issues).
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
----
-
-## 📜 License
-
-This project is distributed under the MIT License. See the `LICENSE` file for more information.
-
----
-
 ## 🙋‍♂️ Author
 
 **Your Name**
 - GitHub: [RKofficial1](https://github.com/RKofficial1)
 - LinkedIn: [Rohit](https://www.linkedin.com/in/rohit-honakhande-083538259/)
 
----
 
-## ⭐ Show your support
 
-If you found this project helpful or learned something from it, please give it a **star**! Thank you.
