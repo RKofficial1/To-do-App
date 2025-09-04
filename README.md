@@ -97,7 +97,7 @@ A full-stack, feature-rich **To-Do List Application** built with **Spring Boot M
 
 ## 📸 Application Screenshot
 
-![Spring Boot To-Do App Screenshot](screenshot.png) <!-- Replace 'screenshot.png' with the path to your actual image -->
+![Spring Boot To-Do App Screenshot](src/main/resources/static/img.png) <!-- Replace 'screenshot.png' with the path to your actual image -->
 
 *The clean and functional user interface of the To-Do application.*
 
